@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 241, 242;
+  --background-end-rgb: 255, 255, 255;
+}
+
+[data-theme="dark"] {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 24, 39;
+  --background-end-rgb: 31, 41, 55;
+}
+
+[data-theme="ocean"] {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 224, 242, 254;
+  --background-end-rgb: 186, 230, 253;
+}
+
+[data-theme="forest"] {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 220, 252, 231;
+  --background-end-rgb: 187, 247, 208;
+}
+
+[data-theme="cute"] {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 253, 242, 248;
+  --background-end-rgb: 252, 231, 243;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
